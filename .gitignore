@@ -131,6 +131,4 @@ dmypy.json
 # vscode 
 .vscode/
 
-# Ipynb
-*.ipynb
-Notebook/*.ipynb
+Scripts/*

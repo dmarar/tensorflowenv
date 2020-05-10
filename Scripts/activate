@@ -28,7 +28,7 @@ deactivate () {
     fi
 
     unset VIRTUAL_ENV
-    if [ ! "$1" = "nondestructive" ] ; then
+    if [ ! "${1:-}" = "nondestructive" ] ; then
     # Self destruct!
         unset -f deactivate
     fi
@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\Dilip\MyExperiments\Python\tensorflowvenv"
+VIRTUAL_ENV="D:\Python\tensorflowenv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
@@ -54,8 +54,8 @@ fi
 
 if [ -z "${VIRTUAL_ENV_DISABLE_PROMPT:-}" ] ; then
     _OLD_VIRTUAL_PS1="${PS1:-}"
-    if [ "x(tensorflowvenv) " != x ] ; then
-	PS1="(tensorflowvenv) ${PS1:-}"
+    if [ "x(tensorflowenv) " != x ] ; then
+	PS1="(tensorflowenv) ${PS1:-}"
     else
     if [ "`basename \"$VIRTUAL_ENV\"`" = "__" ] ; then
         # special case for Aspen magic directories
